@@ -1,0 +1,78 @@
+/*
+* Lucas Thalen
+* Basic stylesheet CSS for CMPUT 401 E-Resume Assignment
+*
+* Colour scheme inspired from: http://blog.visme.co/website-color-schemes/
+* #16 - Solarin's Homepage
+*/
+
+/* https://css-tricks.com/box-sizing/ */
+/* altered box model*/
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+body {
+    background-color: #35353d;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+div.master {
+    background-color: #1E2228;
+    width: 660px;
+    margin: auto;
+    padding: 10px;
+    display:flex;
+    flex-direction: column;
+}
+
+
+/* NAME HEADER CLASS DEFINITIONS */
+div.header {
+    background-color: #5A5A66;
+    justify-content: center;
+}
+
+div.header h1#name {
+    color: #F6BD60;
+    line-height: 10px;
+    font-weight: normal;
+    text-align: center;
+}
+/* END NAME HEADER CLASS DEFS */
+
+div.section {
+    background-color: #5A5A66;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+div.section:nth-child(6) {
+    margin-bottom: 0px;
+}
+div.section h3.category {
+    display: block;
+    color: #7A6C5D;
+    background-color: #F3EFE0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: normal;
+    font-size: 20pt;
+
+    
+}
+div.section p {
+    color: #F6BD60;
+    display: block;
+    min-height: 50px;
+    margin-left: 0px;
+    margin-top: 5px;
+}

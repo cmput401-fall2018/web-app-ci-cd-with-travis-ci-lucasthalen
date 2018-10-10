@@ -1,23 +1,42 @@
+{% load staticfiles %}
 <!doctype html>
 
 <html lang="en">
 <head>
   <meta charset="utf-8">
 
-  <title>Insert Title Here</title>
+  <title>Lucas T CMPUT 401 Assign 2/3</title>
 
-
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 
 </head>
 
 <body>
-  <h1 id="name">Name</h1>
-  <p id="about">About</p>
-  <p id="education">Education</p>
-  <p id="skills">Skills</p>
-  <p id="work">Work</p>
-  <p id="contact">Contact</p>
+  <div class="master">
+    <div class="header">
+      <h1 id="name">NAME</h1>
+    </div>
+    <div class="section">
+      <h3 class="category">ABOUT</h3>
+      <p id="about">About</p>
+    </div>
+    <div class="section">
+        <h3 class="category">EDUCATION</h3>
+        <p id="education">Education</p>
+    </div>
+    <div class="section">
+        <h3 class="category">SKILLS</h3>
+        <p id="skills">Skills</p>
+    </div>
+    <div class="section">
+        <h3 class="category">WORK HISTORY</h3>
+        <p id="work">Work</p>
+    </div>
+    <div class="section">
+        <h3 class="category">CONTACT DETAILS</h3>
+        <p id="contact">Contact</p>
+    </div>
+  </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>
   $(window).on('load', function(){
@@ -27,6 +46,8 @@
           $("#about").text(data.data.attributes.about);
           $("#education").text(data.data.attributes.education);
           $("#skills").text(data.data.attributes.skills);
+          $("#work").text(data.data.attributes.work);
+          $("#contact").text(data.data.attributes.contact);
           // Complete consuming the API data and updating the work and contact sections
           // HINT: look at the above lines, jquery documentation, see what is the object returned
      
